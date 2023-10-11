@@ -1,0 +1,10 @@
+.NavBarItem {
+  color: var(--primary-color);
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+}
+
+.NavBarItem:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
