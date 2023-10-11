@@ -6,24 +6,36 @@ import NavBarItem from "./NavBarItem/NavBarItem";
 import NavBarButton from "./NavBarButton/NavBarButton";
 
 
-
-const NavBar = () => {
-    const navItems = ["About Me", "My Studies", "My Career", "More"]
+const NavBar = React.forwardRef(({navItems, onNavItemClick}, ref) => {
     return (
-        <nav className={classes.NavBar}>
+        <nav ref={ref} className={classes.NavBar}>
             <div className={classes.NavBarContainer}>
                 <div className={classes.Emoji}>👋</div>
                 <div className={classes.NavBarItems}>
-                    {navItems.map(
-                        (text, index) => (
-                        <NavBarItem label={text} key={index} />
-                        )
-                    )}
-                    <NavBarButton label="Connect" />
+                    {navItems.map((item, index) => {
+                        if (item.type === "button") {
+                            return (
+                                <NavBarButton
+                                    label={item.label}
+                                    key={index}
+                                    onClick={() => onNavItemClick(item.ref)}
+                                />
+                            );
+                        } else {
+                            return (
+                                <NavBarItem
+                                    label={item.label}
+                                    key={index}
+                                    onClick={() => onNavItemClick(item.ref)}
+                                />
+                            );
+                        }
+                    })}
                 </div>
             </div>
         </nav>
     )
-}
+});
+
 
 export default NavBar;
