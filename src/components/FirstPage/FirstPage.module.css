@@ -1,0 +1,88 @@
+.FirstPage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f4f3ff;
+  padding: 7rem 1rem 12rem;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.FirstPage > div {
+  flex: 1;
+}
+
+.Content {
+  width: 100%;
+  text-align: center;
+}
+
+.ProfessionText {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  color: rgb(180 178 197/1);
+  text-align: left;
+  margin: 0;
+}
+.Text {
+  color: var(--primary-color);
+  font-size: 60px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  margin-top: 0;
+}
+
+.LightBlue {
+  color: var(--secondary-color);
+}
+
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ImageWrapper {
+  box-sizing: border-box;
+  flex: 1;
+  max-width: 35rem;
+  position: relative; /* For positioning the image inside */
+  border-radius: 50%;
+  overflow: hidden;
+
+  /* Square aspect ratio */
+  aspect-ratio: 1 / 1;
+}
+
+/* Pseudo-element to force square aspect ratio */
+.ImageWrapper::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.Image {
+  display: block;
+  width: 120%; /* scale the width */
+  height: 120%; /* scale the height */
+  position: absolute;
+  top: -20%; /* adjust the position to center the image */
+  left: -20%;
+  object-fit: cover; /* Preserve aspect ratio */
+  object-position: center; /* Center the image */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px) {
+  .FirstPage {
+    max-width: 85%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .FirstPage {
+    max-width: 70%;
+    margin: auto;
+  }
+}
