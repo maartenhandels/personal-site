@@ -11,8 +11,8 @@ const Content = () => {
   const firstPageRef = useRef(null);
 
   const navItems = [
-    { label: "My Studies", ref: useRef(null), type: "item" },
     { label: "My Career", ref: useRef(null), type: "item" },
+    { label: "My Skills", ref: useRef(null), type: "item" },
     { label: "More", ref: useRef(null), type: "item" },
     { label: "Connect", ref: useRef(null), type: "button" }, // <-- Specify it as a 'button'
   ];
