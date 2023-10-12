@@ -17,7 +17,11 @@ const FirstPage = () => {
       </div>
       <div className={classes.Wrapper}>
         <div className={classes.ImageWrapper}>
-          <img src="/images/me.jpeg" alt="Me.jpeg" className={classes.Image} />
+          <img
+            src={process.env.PUBLIC_URL + "/images/me.jpeg"}
+            alt="Me.jpeg"
+            className={classes.Image}
+          />
         </div>
       </div>
     </Section>
