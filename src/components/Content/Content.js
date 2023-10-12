@@ -1,12 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import classes from "./Content.module.css";
 
-import NavBar from "../NavBar/NavBar";
+import DesktopNavBar from "../NavBar/DesktopNavBar/DesktopNavBar";
 import Section from "../Section/Section";
 import FirstPage from "../FirstPage/FirstPage";
+import MobileNavBar from "../NavBar/MobileNavBar/MobileNavBar";
 
 const Content = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMenuOpen, setMenuOpen] = useState(false);
   const navbarRef = useRef(null);
   const firstPageRef = useRef(null);
 
@@ -18,10 +21,29 @@ const Content = () => {
   ];
 
   useEffect(() => {
-    if (navbarRef.current && firstPageRef.current) {
-      const navbarHeight = navbarRef.current.offsetHeight;
-      firstPageRef.current.style.height = `calc(100vh - ${navbarHeight}px)`;
-    }
+    const adjustFirstPageHeight = () => {
+      if (navbarRef.current && firstPageRef.current) {
+        const navbarHeight = navbarRef.current.offsetHeight;
+        firstPageRef.current.style.height = `calc(100vh - ${navbarHeight}px)`;
+      }
+    };
+
+    const handleResize = () => {
+      adjustFirstPageHeight();
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Initial adjustment and mobile check
+    adjustFirstPageHeight();
+    setIsMobile(window.innerWidth <= 768);
+
+    // Listen for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleScrollToSection = (ref) => {
@@ -32,15 +54,28 @@ const Content = () => {
 
   return (
     <>
-      <NavBar
-        ref={navbarRef}
-        navItems={navItems}
-        onNavItemClick={handleScrollToSection}
-      />
+      {isMobile ? (
+        <MobileNavBar
+          isMenuOpen={isMenuOpen}
+          setMenuOpen={setMenuOpen}
+          navItems={navItems}
+          onNavItemClick={handleScrollToSection}
+        />
+      ) : (
+        <DesktopNavBar
+          ref={navbarRef}
+          navItems={navItems}
+          onNavItemClick={handleScrollToSection}
+        />
+      )}
+
       <FirstPage />
       {navItems.map((item, index) => (
         <Section key={index} ref={item.ref} className={classes.FirstPage}>
-          <h1 className={classes.Section}>🚧 Work in Progress 🔨</h1>
+          <div className={classes.Section}>
+            <h1>{item.label}</h1>
+            <h1>🚧 Work in Progress 🔨</h1>
+          </div>
         </Section>
       ))}
     </>

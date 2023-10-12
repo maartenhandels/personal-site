@@ -52,7 +52,7 @@
   overflow: hidden;
 
   /* Square aspect ratio */
-  aspect-ratio: 1 / 1;
+  /*aspect-ratio: 1 / 1;*/
 }
 
 /* Pseudo-element to force square aspect ratio */
@@ -71,6 +71,41 @@
   left: -20%;
   object-fit: cover; /* Preserve aspect ratio */
   object-position: center; /* Center the image */
+}
+
+@media screen and (max-width: 1024px) {
+  .FirstPage {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+  .ProfessionText {
+    text-align: center;
+  }
+  .Text {
+    text-align: center;
+  }
+  .Wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .ImageWrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 20rem;
+  }
+  .Image {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    order: 0;
+  }
+  .Content {
+    order: 1;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1367px) {

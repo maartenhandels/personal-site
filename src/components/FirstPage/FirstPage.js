@@ -18,7 +18,7 @@ const FirstPage = () => {
       <div className={classes.Wrapper}>
         <div className={classes.ImageWrapper}>
           <img
-            src={process.env.REACT_APP_PUBLIC_URL + "/images/me.jpeg"}
+            src={process.env.PUBLIC_URL + "/images/me.jpeg"}
             alt="Me.jpeg"
             className={classes.Image}
           />

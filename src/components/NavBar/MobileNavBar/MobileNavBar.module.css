@@ -1,0 +1,52 @@
+.MobileNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FullScreenMenu {
+    position: fixed;   /* Makes the menu stick to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;      /* Covers the full width of the viewport */
+    height: 100vh;     /* Covers the full height of the viewport */
+    background-color: #E9F8FF;  /* Semi-transparent black */
+    z-index: 1000;    /* Ensures the menu sits above other content */
+
+    opacity: 0; /* Starts as transparent */
+    pointer-events: none; /* Ensures the menu doesn't block interactions when hidden */
+    transition: opacity 0.3s ease-out; /* Transition for the fade effect */
+}
+
+.Open {
+    opacity: 1; /* Fully visible when open */
+    pointer-events: auto; /* Allows interactions when open */
+    z-index: 1;
+}
+
+/* Optional: If you want specific styles when the menu is closed, you can define them here */
+.Closed {
+    /* Any specific styles for the closed state */
+}
+
+.NavOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.TopBar {
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.Emoji {
+    font-size: xx-large;
+}
