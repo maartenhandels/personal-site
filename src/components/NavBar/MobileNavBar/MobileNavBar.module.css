@@ -16,6 +16,9 @@
     opacity: 0; /* Starts as transparent */
     pointer-events: none; /* Ensures the menu doesn't block interactions when hidden */
     transition: opacity 0.3s ease-out; /* Transition for the fade effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Open {
@@ -36,6 +39,23 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-family: "Karla", sans-serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+
+.NavOption {
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.NavOption:not(:last-child) {
+    border-bottom: 1px solid var(--secondary-color); /* Adjust as needed */
+}
+
+.NavOption:hover {
+    cursor: pointer;
 }
 
 .TopBar {

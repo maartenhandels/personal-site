@@ -32,14 +32,16 @@ const MobileNavBar = ({
             : `${classes.FullScreenMenu} ${classes.Closed}`
         }
       >
-        <div className={classes.NavOptions}>
-          {navItems.map((item) => (
-            <div onClick={() => onNavItemClickHandler(item.ref)}>
-              {item.label}
-            </div>
-          ))}
-        </div>
+          <div className={classes.NavOptions}>
+              {navItems.map((item) => (
+                  <div onClick={() => onNavItemClickHandler(item.ref)} className={classes.NavOption}>
+                      {item.label}
+                  </div>
+              ))}
+         </div>
       </div>
+
+
     </div>
   );
 };
