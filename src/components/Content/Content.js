@@ -71,7 +71,7 @@ const Content = () => {
 
       <FirstPage />
       {navItems.map((item, index) => (
-        <Section key={index} ref={item.ref} className={classes.FirstPage}>
+        <Section key={index} ref={item.ref}>
           <div className={classes.Section}>
             <h1>{item.label}</h1>
             <h1>🚧 Work in Progress 🔨</h1>
