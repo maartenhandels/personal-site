@@ -1,6 +1,8 @@
 .Section {
   height: 100vh;
-  overflow-y: auto;
+  max-width: 1024px;
+  margin: auto;
+  overflow: visible;
 }
 
 @media screen and (max-width: 1024px) {

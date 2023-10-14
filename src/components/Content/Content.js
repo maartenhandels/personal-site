@@ -6,6 +6,7 @@ import DesktopNavBar from "../NavBar/DesktopNavBar/DesktopNavBar";
 import Section from "../Section/Section";
 import FirstPage from "../FirstPage/FirstPage";
 import MobileNavBar from "../NavBar/MobileNavBar/MobileNavBar";
+import MyCareer from "../MyCareer/MyCareer";
 
 const Content = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -14,7 +15,7 @@ const Content = () => {
   const firstPageRef = useRef(null);
 
   const navItems = [
-    { label: "My Career", ref: useRef(null), type: "item" },
+    { label: "My Career", ref: useRef(null), type: "item", component: <MyCareer /> },
     { label: "My Skills", ref: useRef(null), type: "item" },
     { label: "More", ref: useRef(null), type: "item" },
     { label: "Connect", ref: useRef(null), type: "button" }, // <-- Specify it as a 'button'
@@ -72,10 +73,12 @@ const Content = () => {
       <FirstPage />
       {navItems.map((item, index) => (
         <Section key={index} ref={item.ref}>
-          <div className={classes.Section}>
+          {item.component ? item.component : <div className={classes.Section}>
             <h1>{item.label}</h1>
             <h1>🚧 Work in Progress 🔨</h1>
           </div>
+          }
+
         </Section>
       ))}
     </>
