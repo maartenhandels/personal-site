@@ -3,10 +3,11 @@ import React, { useRef, useEffect, useState } from "react";
 import classes from "./Content.module.css";
 
 import DesktopNavBar from "../NavBar/DesktopNavBar/DesktopNavBar";
-import Section from "../Section/Section";
+import Section from "../../containers/Section/Section";
 import FirstPage from "../FirstPage/FirstPage";
 import MobileNavBar from "../NavBar/MobileNavBar/MobileNavBar";
-import MyCareer from "../MyCareer/MyCareer";
+import Experience from "../Experience/Experience";
+import Education from "../Education/Education";
 
 const Content = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -15,7 +16,8 @@ const Content = () => {
   const firstPageRef = useRef(null);
 
   const navItems = [
-    { label: "My Career", ref: useRef(null), type: "item", component: <MyCareer /> },
+    { label: "Experience", ref: useRef(null), type: "item", component: <Experience /> },
+    { label: "Education", ref: useRef(null), type: "item", component: <Education /> },
     { label: "My Skills", ref: useRef(null), type: "item" },
     { label: "More", ref: useRef(null), type: "item" },
     { label: "Connect", ref: useRef(null), type: "button" }, // <-- Specify it as a 'button'

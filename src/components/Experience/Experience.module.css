@@ -1,0 +1,11 @@
+.SectionTitle {
+    padding-top: 4rem !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .SectionTitle {
+        padding-top: 0 !important;
+        /*margin-bottom: 2rem;*/
+    }
+}
+

@@ -9,5 +9,6 @@
   /* You can adjust this breakpoint as needed */
   .Section {
     height: auto;
+    padding: 2rem 0;
   }
 }

@@ -1,5 +1,5 @@
 .Card {
-    padding: 3rem;
+    padding: 2rem;
     background-color: var(--background-color);
     border-radius: 1rem;
     transition: box-shadow 0.2s ease-in-out;

@@ -1,0 +1,14 @@
+.SectionTitle {
+    padding-top: 4rem !important;
+    flex: 1;
+}
+
+.Cards {
+    flex: 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .SectionTitle {
+        padding-top: 0 !important;
+    }
+}

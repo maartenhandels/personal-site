@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./FirstPage.module.css";
-import Section from "../Section/Section";
+import Section from "../../containers/Section/Section";
 
 const FirstPage = () => {
   return (

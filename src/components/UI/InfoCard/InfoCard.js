@@ -1,12 +1,12 @@
 import React from "react";
 
-import classes from "./MyCareerCard.module.css";
+import classes from "./InfoCard.module.css";
 
-import Card from "../../UI/Card/Card";
+import Card from "../Card/Card";
 
-const MyCareerCard = ({ subtitle, title, description }) => {
+const InfoCard = ({ subtitle, title, description, onClickHandler }) => {
     return (
-        <Card>
+        <Card className={classes.InfoCard} onClickHandler={onClickHandler}>
             <div className={classes.Subtitle}>
                 <div className={classes.SubtitleCircle}></div>
                 <p className={classes.SubtitleText}>{subtitle}</p>
@@ -17,4 +17,4 @@ const MyCareerCard = ({ subtitle, title, description }) => {
     )
 }
 
-export default MyCareerCard;
+export default InfoCard;

@@ -2,9 +2,9 @@ import React from "react";
 
 import classes from "./Card.module.css";
 
-const Card = ({ children }) => {
+const Card = ({ className, children, onClickHandler }) => {
     return (
-      <div className={classes.Card}>
+      <div className={`${classes.Card} ${className}`} onClick={onClickHandler}>
           {children}
       </div>
     );
