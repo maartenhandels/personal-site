@@ -3,6 +3,7 @@
   max-width: 1024px;
   margin: auto;
   overflow: visible;
+  border-bottom: 1px solid #f4f3ff;
 }
 
 @media screen and (max-width: 1024px) {
