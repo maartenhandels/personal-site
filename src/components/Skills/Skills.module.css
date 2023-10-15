@@ -1,0 +1,22 @@
+.SkillsTitle {
+    flex: 1;
+}
+
+.SkillsList {
+    flex: 2;
+}
+
+.SkillsGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .SkillsGroup {
+        justify-content: space-evenly;
+    }
+}
