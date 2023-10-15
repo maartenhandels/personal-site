@@ -10,8 +10,13 @@
     transition-duration: .5s;
 }
 
+.Pointer:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) {
     .Card {
         padding: 2rem;
+        box-shadow: 0 25px 100px -15px rgba(19,15,73,.1);
     }
 }
