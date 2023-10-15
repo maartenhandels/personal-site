@@ -8,6 +8,7 @@ import FirstPage from "../FirstPage/FirstPage";
 import MobileNavBar from "../NavBar/MobileNavBar/MobileNavBar";
 import Experience from "../Experience/Experience";
 import Education from "../Education/Education";
+import Skills from "../Skills/Skills";
 
 const Content = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -18,7 +19,7 @@ const Content = () => {
   const navItems = [
     { label: "Experience", ref: useRef(null), type: "item", component: <Experience /> },
     { label: "Education", ref: useRef(null), type: "item", component: <Education /> },
-    { label: "My Skills", ref: useRef(null), type: "item" },
+    { label: "My Skills", ref: useRef(null), type: "item", component: <Skills /> },
     { label: "More", ref: useRef(null), type: "item" },
     { label: "Connect", ref: useRef(null), type: "button" }, // <-- Specify it as a 'button'
   ];
