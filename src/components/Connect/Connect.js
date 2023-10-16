@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./Connect.module.css";
 import SectionTitle from "../UI/SectionTitle/SectionTitle";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin, faLinkedinIn} from "@fortawesome/fontawesome-free-brands";
+import { faLinkedin } from "@fortawesome/fontawesome-free-brands";
 
 const Connect = () => {
     return (
@@ -17,6 +17,7 @@ const Connect = () => {
                         <img
                             src={process.env.PUBLIC_URL + "/images/email.svg"}
                             className={classes.EmailIcon}
+                            alt="email-icon"
                         />
                         <a href="mailto:maartenhandels@gmail.com?subject=Wanted to chat about..."
                            className={classes.ContactDetailLink}

@@ -32,6 +32,12 @@ const Education = () => {
                     university of Deusto, famous for it's Busines Faculty known as Deusto Business School or DBS."
                     onClickHandler={navigateToDeusto}
                 />
+                <InfoCard
+                    subtitle="Yale Universite"
+                    title="Precollege"
+                    description="Precollege at the famous university of Yale. "
+                    onClickHandler={navigateToDeusto}
+                />
             </div>
         </ColumnsContainer>
     )
