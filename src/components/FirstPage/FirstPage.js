@@ -10,8 +10,8 @@ const FirstPage = () => {
         <h1 className={classes.ProfessionText}>💻 Software Engineer</h1>
         <h2 className={classes.Text}>
           Building{" "}
-          <span className={classes.LightBlue}>Cloud Microservices</span> at
-          United Health Group -{" "}
+          <span className={classes.LightBlue}>Software</span> at
+          Optum / United Health Group -{" "}
           <span className={classes.LightBlue}>Fortune 5</span>
         </h2>
       </div>
