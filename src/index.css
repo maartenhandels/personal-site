@@ -2,6 +2,12 @@
   --primary-color: #130f49;
   --secondary-color: rgb(52 161 205/1);
   --background-color: #ffffff;
+  --light-gray: rgb(180 178 197/1);
+}
+
+.html {
+  font-family: Karla,sans-serif;
+  line-height: 1.5;
 }
 
 body {

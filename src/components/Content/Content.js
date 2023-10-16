@@ -9,6 +9,7 @@ import MobileNavBar from "../NavBar/MobileNavBar/MobileNavBar";
 import Experience from "../Experience/Experience";
 import Education from "../Education/Education";
 import Skills from "../Skills/Skills";
+import Connect from "../Connect/Connect";
 
 const Content = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -20,8 +21,7 @@ const Content = () => {
     { label: "Experience", ref: useRef(null), type: "item", component: <Experience /> },
     { label: "Education", ref: useRef(null), type: "item", component: <Education /> },
     { label: "My Skills", ref: useRef(null), type: "item", component: <Skills /> },
-    { label: "More", ref: useRef(null), type: "item" },
-    { label: "Connect", ref: useRef(null), type: "button" }, // <-- Specify it as a 'button'
+    { label: "Connect", ref: useRef(null), type: "button", component: <Connect /> }, // <-- Specify it as a 'button'
   ];
 
   useEffect(() => {

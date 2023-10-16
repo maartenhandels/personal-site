@@ -1,0 +1,108 @@
+.Connect {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
+}
+
+.Content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ContactDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 35rem;
+    max-width: 1180px;
+    padding: 3rem 6rem;
+    background-color: rgb(233 249 255/1);
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+}
+
+.Subtitle {
+    color: var(--light-gray);
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.Title {
+    font-size: 2.25rem;
+    color: var(--primary-color);
+    letter-spacing: -.05em;
+    margin: 0;
+}
+
+.ContactDetail {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.EmailIcon {
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.LinkedinIcon {
+    width: 2.25rem;
+    height: auto;
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.ContactDetailLink {
+    text-decoration: none;
+    color: var(--light-gray);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    letter-spacing: -.025em;
+    font-weight: 700;
+}
+
+.Footer {
+    margin: 0;
+    padding: 3rem 0;
+    color: var(--light-gray);
+    line-height: 1.5rem;
+    letter-spacing: .025em;
+}
+
+@media screen and (max-width: 1024px) {
+    .Connect {
+        padding: 0;
+    }
+    .Content {
+        gap: 2rem;
+    }
+    .ContactDetails {
+        padding: 3rem 3rem;
+    }
+    .ContactDetail {
+        flex-direction: column;
+    }
+    .ContactDetailLink {
+        font-size: 1.25rem;
+    }
+    .Footer {
+        padding: 1rem 0;
+    }
+}
