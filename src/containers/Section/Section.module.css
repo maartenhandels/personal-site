@@ -11,5 +11,6 @@
   .Section {
     height: auto;
     padding: 2rem 0;
+    border-bottom: none;
   }
 }

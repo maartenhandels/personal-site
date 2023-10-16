@@ -24,4 +24,11 @@
         justify-content: center;
         padding-top: 0;
     }
+
+    .ColumnsContainer > * {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
 }
