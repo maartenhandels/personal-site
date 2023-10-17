@@ -1,9 +1,8 @@
 import React from "react";
 
 import classes from "./MobileNavBar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Hamburger from 'hamburger-react'
+
 
 const MobileNavBar = ({
   isMenuOpen,
@@ -18,12 +17,12 @@ const MobileNavBar = ({
   return (
     <div className={classes.MobileNavBar}>
       <div className={classes.TopBar}>
-        <div className={classes.Emoji}>👋</div>
-        <FontAwesomeIcon
-          icon={isMenuOpen ? faXmark : faBars}
-          size="2x"
-          onClick={() => setMenuOpen(!isMenuOpen)}
-        />
+          <div className={classes.Emoji}>👋</div>
+          <Hamburger
+              toggled={isMenuOpen}
+              toggle={setMenuOpen}
+              color="#130f49"
+          />
       </div>
       <div
         className={
