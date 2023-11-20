@@ -17,7 +17,7 @@ const DesktopNavBar = React.forwardRef(({ navItems, onNavItemClick }, ref) => {
                 <NavBarButton
                   label={item.label}
                   key={index}
-                  onClick={() => onNavItemClick(item.ref)}
+                  onClick={() => onNavItemClick(item.ref, item.label)}
                 />
               );
             } else {
@@ -25,7 +25,7 @@ const DesktopNavBar = React.forwardRef(({ navItems, onNavItemClick }, ref) => {
                 <NavBarItem
                   label={item.label}
                   key={index}
-                  onClick={() => onNavItemClick(item.ref)}
+                  onClick={() => onNavItemClick(item.ref, item.label)}
                 />
               );
             }
