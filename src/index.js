@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from "react-ga";
+
+ReactGA.initialize("G-G73V1G7ZR6"); // Replace with your Google Analytics tracking ID
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

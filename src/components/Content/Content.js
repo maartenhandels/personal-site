@@ -10,6 +10,7 @@ import Experience from "../Experience/Experience";
 import Education from "../Education/Education";
 import Skills from "../Skills/Skills";
 import Connect from "../Connect/Connect";
+import ReactGA from "react-ga";
 
 const Content = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -50,8 +51,15 @@ const Content = () => {
     };
   }, []);
 
-  const handleScrollToSection = (ref) => {
+  const handleScrollToSection = (ref, label) => {
     if (ref.current) {
+      console.log(label);
+      // Sending event to Google Analytics
+      ReactGA.event({
+        category: 'User',
+        action: 'Clicked NavBar Button',
+        label: label
+      });
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };

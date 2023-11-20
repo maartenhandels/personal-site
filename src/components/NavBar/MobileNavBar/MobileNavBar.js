@@ -33,7 +33,7 @@ const MobileNavBar = ({
       >
           <div className={classes.NavOptions}>
               {navItems.map((item) => (
-                  <div onClick={() => onNavItemClickHandler(item.ref)} className={classes.NavOption}>
+                  <div onClick={() => onNavItemClickHandler(item.ref, item.label)} className={classes.NavOption}>
                       {item.label}
                   </div>
               ))}
