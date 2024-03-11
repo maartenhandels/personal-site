@@ -26,7 +26,7 @@ const Experience = () => {
             <div>
                 <InfoCard
                     subtitle="Optum - United Health Group"
-                    title="Software Engineer Associate"
+                    title="Software Engineer"
                     description="Building cloud microservices for the healthcare industry leader and Fortune 500's
                     5th company using a SCRUM methodology. Tech Stack: Java (Spring), Python, Docker, Kubernetes,
                     Azure, SQL (PostgreSQL), Kafka, Redis, Jenkins, Git and more."
