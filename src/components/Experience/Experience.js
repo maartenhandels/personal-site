@@ -31,9 +31,10 @@ const Experience = () => {
                 <InfoCard
                     subtitle="Tiqets.com - Expedia Group B2B"
                     title="Backend Engineer"
-                    description="Building backend services for Tiqets.com, the online ticketing platform helping
-                    travelers discover and book ways to experience culture, now part of Expedia Group B2B.
-                    Tech Stack: Java, Python, microservices, SQL, Git and more."
+                    description="Building scalable backend services for Tiqets.com, the online ticketing platform
+                    helping travelers discover and book ways to experience culture, now part of Expedia Group B2B.
+                    Tech Stack: Python, FastAPI, Flask, PostgreSQL, Kubernetes, AWS, API design,
+                    distributed systems, observability and cloud-native architecture."
                     onClickHandler={navigateToTiqets}
                 />
                 <InfoCard
