@@ -18,13 +18,18 @@ const Skills = ({ skills }) => {
     const technicalSkills = [
         { icon: faJava, name: 'Java' },
         { icon: faPython, name: 'Python' },
+        { src: process.env.PUBLIC_URL + "/images/fastapi-icon.svg", name: 'FastAPI' },
+        { src: process.env.PUBLIC_URL + "/images/flask-icon.svg", name: 'Flask' },
         { icon: faJsSquare, name: 'Javascript' },
         { src: process.env.PUBLIC_URL + "/images/spring-boot-icon.png", name: 'Spring' },
         { icon: faReact, name: 'React'},
         { src: process.env.PUBLIC_URL + "/images/microsoft-icon.png", name: 'Azure'},
+        { src: process.env.PUBLIC_URL + "/images/aws-icon.svg", name: 'AWS'},
         { src: process.env.PUBLIC_URL + "/images/docker-icon.png", name: 'Docker'},
         { src: process.env.PUBLIC_URL + "/images/kubernetes-icon.png", name: 'Kubernetes'},
+        { src: process.env.PUBLIC_URL + "/images/postgresql-icon.svg", name: 'PostgreSQL'},
         { src: process.env.PUBLIC_URL + "/images/kafka-icon.png", name: 'Kafka'},
+        { src: process.env.PUBLIC_URL + "/images/datadog-icon.svg", name: 'Datadog'},
 
     ];
 

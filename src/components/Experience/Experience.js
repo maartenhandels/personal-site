@@ -33,8 +33,8 @@ const Experience = () => {
                     title="Backend Engineer"
                     description="Building scalable backend services for Tiqets.com, the online ticketing platform
                     helping travelers discover and book ways to experience culture, now part of Expedia Group B2B.
-                    Tech Stack: Python, FastAPI, Flask, PostgreSQL, Kubernetes, AWS, API design,
-                    distributed systems, observability and cloud-native architecture."
+                    Tech Stack: Python, FastAPI, Flask, PostgreSQL, Kubernetes, AWS, Datadog,
+                    API design, distributed systems, observability and cloud-native architecture."
                     onClickHandler={navigateToTiqets}
                 />
                 <InfoCard
