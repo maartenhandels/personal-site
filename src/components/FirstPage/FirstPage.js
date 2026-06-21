@@ -7,12 +7,12 @@ const FirstPage = () => {
   return (
     <Section className={classes.FirstPage}>
       <div className={classes.Content}>
-        <h1 className={classes.ProfessionText}>💻 Software Engineer</h1>
+        <h1 className={classes.ProfessionText}>💻 Backend Engineer</h1>
         <h2 className={classes.Text}>
           Building{" "}
-          <span className={classes.LightBlue}>Software</span> at
-          Optum / United Health Group -{" "}
-          <span className={classes.LightBlue}>Fortune 5</span>
+          <span className={classes.LightBlue}>Backend Software</span> at
+          Tiqets.com -{" "}
+          <span className={classes.LightBlue}>Expedia Group B2B</span>
         </h2>
       </div>
       <div className={classes.Wrapper}>

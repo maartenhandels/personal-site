@@ -1,7 +1,7 @@
 .ColumnsContainer {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
@@ -9,6 +9,7 @@
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 4rem;
 }
 
 .ColumnsContainer > * {
@@ -22,7 +23,9 @@
     .ColumnsContainer {
         flex-direction: column;
         justify-content: center;
+        min-height: auto;
         padding-top: 0;
+        padding-bottom: 0;
     }
 
     .ColumnsContainer > * {

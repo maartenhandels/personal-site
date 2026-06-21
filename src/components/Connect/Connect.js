@@ -35,7 +35,7 @@ const Connect = () => {
                     </div>
                 </div>
             </div>
-            <p className={classes.Footer}>© 2023 - Developed by Maarten Handels.</p>
+            <p className={classes.Footer}>© 2026 - Developed by Maarten Handels.</p>
         </div>
 
     )
